@@ -1,0 +1,113 @@
+html, body {
+  margin:0; padding:0;
+  height:100%;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #c3a3f1, #6414e9);
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 上から詰める */
+  padding: 2em;
+  min-height: 100%;
+  gap: 2em;
+}
+
+table {
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+th, td {
+  border:1px solid #999;
+  padding:0.5em 1em;
+  text-align:center;
+  cursor:pointer;
+  width:120px;
+  height:40px; /* 固定高さ */
+  white-space: nowrap;
+}
+/* 追加: 選択中セルの強調表示 */
+td.selected {
+  background: #ffec99 !important;
+  border: 2px solid #f39c12;
+}
+td.filled {
+  background:#9fdf9f;
+}
+
+td.empty:hover {
+  background:#def;
+}
+
+#roulette-container {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top:10px;
+}
+
+#wheel {
+  width: 300px;
+  height: 300px;
+}
+
+#spin-btn {
+  margin-top:-60px;
+  padding:1em 2em;
+  cursor:pointer;
+  font-weight:bold;
+  border:none;
+  border-radius:50%;
+  background: radial-gradient(#fdcf3b 50%, #d88a40 85%);
+  color: #c66e16;
+  font-size:1em;
+}
+
+#selected-name {
+  margin-top:1em;
+  font-size:1.2em;
+  font-weight:bold;
+  color:#202020;
+}
+#arrow {
+  position: absolute;
+  top: -20px;
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid #e74c3c;
+}
+#arrow::after {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -15px;
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #c0392b;
+}
+#arrow::before {
+  content: '';
+  position: absolute;
+  top: -35px;
+  left: -5px;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #fff;
+}

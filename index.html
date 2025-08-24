@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ルーレット振り分け（氏名表示版）</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="main-container">
+  <!-- 左側：5グループ表 -->
+  <table id="group-table">
+    <thead>
+      <tr>
+        <th>1G</th><th>2G</th><th>3G</th><th>4G</th><th>5G</th>
+      </tr>
+    </thead>
+    <tbody>
+      <script>
+        for(let i=0;i<8;i++){
+          document.write('<tr>');
+          for(let j=0;j<5;j++){
+            document.write('<td class="empty" data-row="'+i+'" data-col="'+j+'"></td>');
+          }
+          document.write('</tr>');
+        }
+      </script>
+    </tbody>
+  </table>
+
+  <!-- 右側：ルーレット -->
+  <div id="roulette-container">
+    <canvas id="wheel" width="300" height="300"></canvas>
+    <button id="spin-btn">Spin</button>
+    <div id="selected-name">ルーレットを回してください</div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
