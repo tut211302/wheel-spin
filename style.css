@@ -74,6 +74,24 @@ td.empty:hover {
   font-size:1em;
 }
 
+/* Reset ボタンの位置を spin ボタンの下に配置 */
+#reset-btn {
+  display: block;
+  margin: 1em auto 0 auto;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#reset-btn:hover {
+  background-color: #c0392b;
+}
+
 #selected-name {
   margin-top:1em;
   font-size:1.2em;
